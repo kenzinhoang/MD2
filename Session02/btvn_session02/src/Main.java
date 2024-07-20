@@ -162,23 +162,23 @@ import java.util.Scanner;
 
 
 //================================BAI TAP 5========================================
-//public class Main {
-//    public static void main(String[] args) {
-//
-//        for (int i = 2; i <= 100; i++) {
-//            Boolean isPrime = true;
-//            for (int j = 2; j <= i / 2; j++) {
-//                if (i % j == 0) {
-//                    isPrime = false;
-//                    break;
-//                }
-//            }
-//            if (isPrime) {
-//                System.out.println(i + " la so nguyen to");
-//            }
-//        }
-//    }
-//}
+public class Main {
+    public static void main(String[] args) {
+
+        for (int i = 2; i <= 100; i++) {
+            Boolean isPrime = true;
+            for (int j = 2; j <= i / 2; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                System.out.println(i + " la so nguyen to");
+            }
+        }
+    }
+}
 
 
 //================================BAI TAP 6========================================
@@ -287,83 +287,83 @@ import java.util.Scanner;
 //}
 
 //================================BAI TAP 8========================================
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int a, b, c;
-
-        while (true) {
-            System.out.println("Nhập vào cạnh A của tam giác:");
-            a = validateInput(scanner);
-
-            System.out.println("Nhập vào cạnh B của tam giác:");
-            b = validateInput(scanner);
-
-            System.out.println("Nhập vào cạnh C của tam giác:");
-            c = validateInput(scanner);
-
-            if (isValidTriangle(a, b, c)) {
-                break;
-            } else {
-                System.out.println("Các cạnh nhập vào không tạo thành một tam giác hợp lệ. Vui lòng nhập lại.");
-            }
-        }
-
-        int choice;
-        do {
-            System.out.println("1. Tính chu vi");
-            System.out.println("2. Tính diện tích");
-            System.out.print("Chọn một chức năng: ");
-            choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    float p = chuVi(a, b, c);
-                    System.out.println("Chu vi tam giác: " + p);
-                    break;
-                case 2:
-                    float s = dientich(a, b, c);
-                    System.out.println("Diện tích tam giác: " + s);
-                    break;
-                default:
-                    System.out.println("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
-                    break;
-            }
-        } while (choice != 1 && choice != 2);
-
-        scanner.close();
-    }
-
-    public static int validateInput(Scanner scanner) {
-        int check;
-        while (true) {
-            if (scanner.hasNextInt()) {
-                check = scanner.nextInt();
-                if (check > 0) {
-                    break;
-                } else {
-                    System.out.println("Giá trị nhập vào phải lớn hơn 0. Vui lòng nhập lại:");
-                }
-            } else {
-                System.out.println("Đầu vào không hợp lệ. Vui lòng nhập lại:");
-                scanner.next();
-            }
-        }
-        return check;
-    }
-
-    public static boolean isValidTriangle(int a, int b, int c) {
-        return a + b > c && a + c > b && b + c > a;
-    }
-
-    // Tính chu vi
-    public static float chuVi(int a, int b, int c) {
-        return a + b + c;
-    }
-
-    // Tính diện tích
-    public static float dientich(int a, int b, int c) {
-        float p = (float) (a + b + c) / 2;
-        return (float) Math.sqrt(p * (p - a) * (p - b) * (p - c));
-    }
-}
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int a, b, c;
+//
+//        while (true) {
+//            System.out.println("Nhập vào cạnh A của tam giác:");
+//            a = validateInput(scanner);
+//
+//            System.out.println("Nhập vào cạnh B của tam giác:");
+//            b = validateInput(scanner);
+//
+//            System.out.println("Nhập vào cạnh C của tam giác:");
+//            c = validateInput(scanner);
+//
+//            if (isValidTriangle(a, b, c)) {
+//                break;
+//            } else {
+//                System.out.println("Các cạnh nhập vào không tạo thành một tam giác hợp lệ. Vui lòng nhập lại.");
+//            }
+//        }
+//
+//        int choice;
+//        do {
+//            System.out.println("1. Tính chu vi");
+//            System.out.println("2. Tính diện tích");
+//            System.out.print("Chọn một chức năng: ");
+//            choice = scanner.nextInt();
+//
+//            switch (choice) {
+//                case 1:
+//                    float p = chuVi(a, b, c);
+//                    System.out.println("Chu vi tam giác: " + p);
+//                    break;
+//                case 2:
+//                    float s = dientich(a, b, c);
+//                    System.out.println("Diện tích tam giác: " + s);
+//                    break;
+//                default:
+//                    System.out.println("Lựa chọn không hợp lệ. Vui lòng chọn lại.");
+//                    break;
+//            }
+//        } while (choice != 1 && choice != 2);
+//
+//        scanner.close();
+//    }
+//
+//    public static int validateInput(Scanner scanner) {
+//        int check;
+//        while (true) {
+//            if (scanner.hasNextInt()) {
+//                check = scanner.nextInt();
+//                if (check > 0) {
+//                    break;
+//                } else {
+//                    System.out.println("Giá trị nhập vào phải lớn hơn 0. Vui lòng nhập lại:");
+//                }
+//            } else {
+//                System.out.println("Đầu vào không hợp lệ. Vui lòng nhập lại:");
+//                scanner.next();
+//            }
+//        }
+//        return check;
+//    }
+//
+//    public static boolean isValidTriangle(int a, int b, int c) {
+//        return a + b > c && a + c > b && b + c > a;
+//    }
+//
+//    // Tính chu vi
+//    public static float chuVi(int a, int b, int c) {
+//        return a + b + c;
+//    }
+//
+//    // Tính diện tích
+//    public static float dientich(int a, int b, int c) {
+//        float p = (float) (a + b + c) / 2;
+//        return (float) Math.sqrt(p * (p - a) * (p - b) * (p - c));
+//    }
+//}

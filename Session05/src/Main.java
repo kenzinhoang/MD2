@@ -1,3 +1,5 @@
+import baitap4.ArrayCalculator;
+
 import static baitap4.ArrayCalculator.sumOfArray;
 
 public class Main {
@@ -64,6 +66,7 @@ public class Main {
 
     //baitap4
     public static void main(String[] args) {
+        ArrayCalculator calculator = new ArrayCalculator();
         int[] intArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         double[] doubleArray = {1.5, 2.5, 3.0, 4, 0.5, 6, 7.5, 8, 9, 10};
         System.out.println("Tổng mảng số nguyên là: " + sumOfArray(intArray));
